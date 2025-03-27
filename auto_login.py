@@ -52,7 +52,8 @@ def extension_login():
 
     # Inject Cookie to skip login
     logging.info("Injecting Cookie to skip login")
-    browser.add_cookie({"name": "MUSIC_U", "value": ${{ secrets.MUSIC_U }}})
+    music_u = os.environ.get("MUSIC_U")
+    browser.add_cookie({"name": "MUSIC_U", "value": music_u})
     browser.refresh()
     time.sleep(5)  # Wait for the page to refresh
     logging.info("Cookie login successful")
