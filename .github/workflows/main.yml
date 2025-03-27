@@ -46,6 +46,7 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
+          MUSIC_U: ${{ secrets.MUSIC_U }} 
           PYTHONIOENCODING: utf-8
           PYTHONLEGACYWINDOWSSTDIO: utf-8
         run: python auto_login.py
